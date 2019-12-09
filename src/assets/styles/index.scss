@@ -1,0 +1,30 @@
+@import './config';
+@import './mixins';
+@import './helper';
+@import './element';
+@import './admin';
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  line-height: 1.1;
+  color: $text-color;
+  font-size: $base-text-size;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $title-color;
+  margin-bottom: 10px;
+  font-weight: bold;
+}

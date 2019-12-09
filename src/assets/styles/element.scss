@@ -1,0 +1,58 @@
+// 由于用运行时打包element.scss会导致开发模式非常慢，
+// 所以当感觉打包速度慢时
+// 请立即改为使用element在线生成css工具先直接生成css的方案
+
+// 所以每次更新element主题都需要去 https://element.eleme.io/#/zh-CN/theme/preview 先生成一套
+
+// @import './config.scss';
+
+// // https://element.eleme.io/#/zh-CN/component/custom-theme
+// // https://github.com/ElemeFE/element/blob/dev/packages/theme-chalk/src/common/var.scss
+// // 优先使用变量来定制element的主题
+
+// // 主题色
+// $--color-primary: $theme-color;
+// // 成功颜色
+// $--color-success: $color-success;
+// // 警告颜色
+// $--color-warning: $color-warning;
+// // 危险颜色
+// $--color-danger: $color-danger;
+// // 提示颜色
+// $--color-info: $color-info;
+
+// $--font-path: '~element-ui/lib/theme-chalk/fonts';
+
+// @import '~element-ui/packages/theme-chalk/src/index';
+
+// 请结合config.scss里定义的变量来生成css
+
+@import './element/index.css';
+
+.el-card {
+  margin-bottom: 20px;
+  .el-card.is-always-shadow {
+    box-shadow: none;
+  }
+}
+
+.el-table {
+  th {
+    background-color: #f8f8f9;
+    color: #404040;
+  }
+  th,
+  td {
+    text-align: center;
+  }
+}
+
+.el-select {
+  width: 100%;
+}
+.el-popover__title {
+  color: #666;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f2f2f2;
+  font-size: 14px;
+}

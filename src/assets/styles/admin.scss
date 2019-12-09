@@ -1,0 +1,137 @@
+html {
+  position: relative;
+  background-color: #f4f5f9;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.el-step {
+  margin-bottom: 20px;
+
+  &.is-horizontal .el-step__line {
+    top: 16px;
+  }
+
+  .el-step__icon-inner {
+    font-size: 20px;
+  }
+
+  .el-step__icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .is-process {
+    color: $theme-color;
+    border-color: $theme-color;
+    &.el-step__title {
+      color: #666;
+      font-weight: bold;
+    }
+  }
+
+  .is-success {
+    .el-step__line {
+      background-color: $theme-color;
+    }
+
+    .el-step__icon {
+      background: $theme-color;
+      i {
+        color: #ffffff;
+        font-size: 20px;
+      }
+    }
+
+    &.el-step__title {
+      color: #666;
+      font-weight: bold;
+    }
+  }
+}
+
+.base-form {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.btn-group {
+  position: relative;
+  margin-bottom: 12px;
+
+  .submit {
+    margin-left: 16px;
+  }
+
+  .gray,
+  .green {
+    position: relative;
+  }
+
+  .gray {
+    cursor: not-allowed;
+
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      z-index: 2;
+      background: #cccccc;
+      opacity: 0.5;
+    }
+  }
+
+  button {
+    margin-right: 16px;
+  }
+}
+
+.el-form-item {
+  .el-form-item__label {
+    &::after {
+      content: ':';
+      display: inline-block;
+      margin-left: 0px;
+    }
+  }
+}
+
+table {
+  .el-button-group,
+  .operate-btn-group {
+    .el-button {
+      padding: 0;
+      color: #2fc29b;
+      border: 0;
+      background: none;
+      display: inline-block;
+      margin: 0 6px 0 6px;
+    }
+    .el-button:after,
+    .with-separate:after {
+      content: '|';
+      width: 1px;
+      display: inline-block;
+      margin-left: 6px;
+      color: #ccc;
+    }
+    .el-button:last-child:after {
+      display: none;
+    }
+  }
+}
+
+.table-btn-group {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
