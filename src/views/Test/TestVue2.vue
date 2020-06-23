@@ -69,42 +69,38 @@
     methods: {
       handleCheck(currNode, selectObj) {
         // 声明函数
-        const func = (arr, currNode, checked) => {
-          let find = false
-          arr.forEach(v => {
-            if (v.label === '搜索' && !!checkNodes.find(id => id === v.id)) {
-              //找到节点，代表选中，不用修改兄弟节点
-              find = true
+        const func = (arr, currNode) => {
+          debugger
+          //当前层节点是否选中 (搜索) 节点
+          const searchNodeChecked = arr.find(v => v.label === '搜索' && !!checkNodes.find(id => id === v.id))
+          if (!searchNodeChecked) {
+            // currNode 节点不是选中的 搜索 节点， 但是搜索节点没有被选中， 这时候自动选中搜索节点
+            const searchNode = arr.find(v => v.label === '搜索');
+            if (searchNode) {
+              checkNodes.push(searchNode.id);
             }
-          })
-          //当前数据层级，没找到 (选中 搜索) 节点
-          if (!find) {
-            //查看当前层是否根本就没有 (搜索) 节点
-            const isSearchNode = !!arr.find(v => v.label === '搜索')
-            //当前层节点 包含 (搜索) 节点
-            if (isSearchNode) {
-              //默认除去当前层所有被选中的节点
-              arr.forEach(v => {
-                // 将以及选中的当前层几点，过滤掉
-                checkNodes = checkNodes.filter(id => id !== v.id)
-              })
-              //没找到，代表当前层级'搜索'没有选中，需要将兄弟节点全部设置为未选中
-              this.$refs.tree.setCheckedKeys(checkNodes);
-            }
+
+            // //默认除去当前层所有被选中的节点
+            // arr.forEach(v => {
+            //   // 将以及选中的当前层几点，过滤掉
+            //   checkNodes = checkNodes.filter(id => id !== v.id)
+            // })
+            //没找到，代表当前层级'搜索'没有选中，需要将兄弟节点全部设置为未选中
+            this.$refs.tree.setCheckedKeys(checkNodes);
+          } else {
+
           }
           //查看是否有子节点，递归
           arr.forEach(v => {
             if (v.children && v.children.length > 0) {
-              func(v.children, currNode, checked);
+              func(v.children, currNode);
             }
           })
         }
 
         //获取所有选中接节点
         let checkNodes = selectObj.checkedKeys;
-        //当前节点是否被选中
-        const checked = !!selectObj.checkedKeys.find(id => id === currNode.id)
-        func(this.option, currNode, checked);
+        func(this.option, currNode);
       },
     }
   }
