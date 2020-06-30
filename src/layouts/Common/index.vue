@@ -271,7 +271,7 @@ export default {
     padding: 0;
     .main-inner {
       height: 100%;
-      overflow-y: scroll;
+      overflow: hidden;
       padding: 20px;
     }
     .collapse-btn {

@@ -70,25 +70,39 @@
       handleCheck(currNode, selectObj) {
         // 声明函数
         const func = (arr, currNode) => {
-          debugger
-          //当前层节点是否选中 (搜索) 节点
-          const searchNodeChecked = arr.find(v => v.label === '搜索' && !!checkNodes.find(id => id === v.id))
-          if (!searchNodeChecked) {
-            // currNode 节点不是选中的 搜索 节点， 但是搜索节点没有被选中， 这时候自动选中搜索节点
-            const searchNode = arr.find(v => v.label === '搜索');
-            if (searchNode) {
-              checkNodes.push(searchNode.id);
+          let find = false
+          let currChecked = [];
+          arr.forEach(v => {
+            const node = checkNodes.find(id => id === v.id)
+            //找到搜索，并且为选中状态
+            if (v.label === '搜索' && node) {
+              find = true
             }
-
-            // //默认除去当前层所有被选中的节点
-            // arr.forEach(v => {
-            //   // 将以及选中的当前层几点，过滤掉
-            //   checkNodes = checkNodes.filter(id => id !== v.id)
-            // })
-            //没找到，代表当前层级'搜索'没有选中，需要将兄弟节点全部设置为未选中
-            this.$refs.tree.setCheckedKeys(checkNodes);
-          } else {
-
+            if (node) {
+              //记录当前层选中节点
+              currChecked.push(node)
+            }
+          })
+          //当前数据层级，没找到 (选中 搜索) 节点
+          if (!find) {
+            //查看当前层是否根本就没有 (搜索) 节点元素
+            const searchNode = arr.find(v => v.label === '搜索')
+            //当前层节点 包含 (搜索) 节点元素
+            if (searchNode) {
+              //当前节点不是 搜索 节点，但是当前层有兄弟节点被选中，代表是没有选择 搜索 直接选择兄弟节点
+              if (searchNode.id !== currNode.id && currChecked.length > 0) {
+                //自动选中 搜索 节点
+                checkNodes.push(searchNode.id)
+              } else {
+                //默认除去当前层所有被选中的节点
+                arr.forEach(v => {
+                  // 将以及选中的当前层几点，过滤掉
+                  checkNodes = checkNodes.filter(id => id !== v.id)
+                })
+              }
+              //没找到，代表当前层级'搜索'没有选中，需要将兄弟节点全部设置为未选中
+              this.$refs.tree.setCheckedKeys(checkNodes);
+            }
           }
           //查看是否有子节点，递归
           arr.forEach(v => {
