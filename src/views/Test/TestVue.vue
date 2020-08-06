@@ -3,6 +3,7 @@
     <el-table :data="tableData" style="width: 100%;">
       <el-table-column prop="cusCompanyName" label="对方公司" width="180"/>
       <el-table-column prop="ourCompanyName" label="我方公司" width="180"/>
+      <el-table-column prop="timeShowStr" label="时间"/>
       <el-table-column prop="reason" label="备注"/>
     </el-table>
   </div>
@@ -72,7 +73,7 @@
           const sortMonthArr = timeObjArr[yearItem].sort((a, b) => a - b)
           let startM // 记录开始位置
           let lastM // 记录循环上次数据
-          let timeStr = `;${yearItem}年` //拼接前端显示, 每次年循环会把这里重新赋值
+          let timeStr = `;${yearItem}年` // 拼接前端显示, 每次年循环会把这里重新赋值
           sortMonthArr.forEach((monthItem, monthIndex) => {
             // 第一项
             if (monthIndex === 0) {
