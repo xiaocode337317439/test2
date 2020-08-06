@@ -2,9 +2,9 @@
   <div>
     <span>关于</span>
     <RedPointComponent :redval="redCount">
-      <template scope='redCount'>
+      <template scope="redCount">
         <i v-if="redCount.text > 0 && !showRedPoint" class="bg-danger redtip">
-          {{redCount.text >= 99 ? '99+' : redCount.text}}
+          {{ redCount.text >= 99 ? '99+' : redCount.text }}
         </i>
         <i v-else class="red-point"></i>
       </template>
@@ -12,20 +12,20 @@
   </div>
 </template>
 <script>
-  import RedPointComponent from './RedPointComponent'
+import RedPointComponent from './RedPointComponent'
 
-  export default {
-    data() {
-      return {
-        redCount: "10",
-        //是否只显示红点
-        showRedPoint: false
-      }
-    },
-    components: {
-      RedPointComponent
-    },
+export default {
+  components: {
+    RedPointComponent
+  },
+  data() {
+    return {
+      redCount: '10',
+      // 是否只显示红点
+      showRedPoint: false
+    }
   }
+}
 </script>
 <style lang="scss" rel="stylesheet/scss">
   .red-point {

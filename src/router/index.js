@@ -101,7 +101,7 @@ const router = new Router({
             title: 'testVue'
           },
           component: () => import('@/views/Test/TestVue')
-        },
+        }
       ]
     },
     {

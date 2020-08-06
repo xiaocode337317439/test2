@@ -1,14 +1,14 @@
 <template>
-    <span>
-        <slot :text="redval"></slot>
-    </span>
+  <span>
+    <slot :text="redval"></slot>
+  </span>
 </template>
 
 <script>
-  export default {
-    name: "RedPoint",
-    props: ['redval']
-  }
+export default {
+  name: 'RedPoint',
+  props: ['redval']
+}
 </script>
 
 <style scoped>

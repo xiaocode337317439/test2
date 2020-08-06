@@ -17,16 +17,16 @@
       <o-page-table :form-data="formData" :columns="tabelColumns" :url="url"></o-page-table>
     </el-card>
     <!--<DialogComponent :edit-form-list="editFormList" :edit-type="editType" :form="form" :hide="hide" :modal-show="modalShow"-->
-                  <!--:save="save" :close="close"/>-->
-    <DialogComponent :modal-show="modalShow" :close="close"/>
+    <!--:save="save" :close="close"/>-->
+    <DialogComponent :modal-show="modalShow" :close="close" />
   </div>
 </template>
 
 <script>
-  import DialogComponent from "./DialogComponent";
+import DialogComponent from './DialogComponent'
 
-  export default {
-  components: {DialogComponent},
+export default {
+  components: { DialogComponent },
   data() {
     return {
       url:
