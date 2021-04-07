@@ -62,6 +62,7 @@ export default {
     filter(data, checkedNodes) {
       return data.filter(value => {
         if (value.children) {
+          // 递归
           value.children = this.filter(value.children, checkedNodes)
           return (value.children && value.children.length > 0)
         } else {
