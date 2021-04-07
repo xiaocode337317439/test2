@@ -18,8 +18,8 @@ export default {
     return {
       data: [],
       defaultProps: {
-        children: 'children',
-        label: 'label'
+        children: 'childList',
+        label: 'title'
       }
     }
   },
@@ -27,48 +27,58 @@ export default {
     // 模拟后台获取数据
     const netData = [{
       id: 1,
-      label: '一级 1',
-      children: [{
+      title: '一级 1',
+      childList: [{
         id: 4,
-        label: '二级 1-1',
-        children: [{
+        title: '二级 1-1',
+        childList: [{
           id: 9,
-          label: '三级 1-1-1'
+          title: '三级 1-1-1',
+          childList: [
+            {
+              id: 11,
+              title: '四级 1-1-1-1'
+            },
+            {
+              id: 12,
+              title: '四级 1-1-1-2'
+            }
+          ]
         }, {
           id: 10,
-          label: '三级 1-1-2'
+          title: '三级 1-1-2'
         }]
       }]
     }, {
       id: 2,
-      label: '一级 2',
-      children: [{
+      title: '一级 2',
+      childList: [{
         id: 5,
-        label: '二级 2-1'
+        title: '二级 2-1'
       }, {
         id: 6,
-        label: '二级 2-2'
+        title: '二级 2-2'
       }]
     }, {
       id: 3,
-      label: '一级 3',
-      children: [{
+      title: '一级 3',
+      childList: [{
         id: 7,
-        label: '二级 3-1'
+        title: '二级 3-1'
       }, {
         id: 8,
-        label: '二级 3-2'
+        title: '二级 3-2'
       }]
     }]
     // 模拟后台获取选中id集合
-    const idList = [9, 5, 8]
+    const idList = [9, 5, 8, 12]
     // 定义过滤函数
     const filterData = (allData, selectIds) => {
       return allData.filter(value => {
-        if (value.children) {
+        if (value.childList) {
           // 递归
-          value.children = filterData(value.children, selectIds)
-          return (value.children && value.children.length > 0)
+          value.childList = filterData(value.childList, selectIds)
+          return (value.childList && value.childList.length > 0)
         } else {
           return selectIds.find(selectId => value.id === selectId)
         }
