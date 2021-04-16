@@ -1,84 +1,2484 @@
 <template>
-  <el-tree
-    ref="tree"
-    :data="data"
-    show-checkbox
-    default-expand-all
-    node-key="id"
-    highlight-current
-    :props="defaultProps"
-  >
-  </el-tree>
+  <div>
+    <el-tree
+      ref="tree"
+      :data="data"
+      show-checkbox
+      default-expand-all
+      node-key="id"
+      highlight-current
+      :props="defaultProps"
+    >
+    </el-tree>
+  </div>
 </template>
 
 <script>
-export default {
 
+export default {
   data() {
     return {
       data: [],
       defaultProps: {
-        children: 'childList',
-        label: 'title'
+        children: 'menus',
+        label: 'titleCn'
       }
     }
   },
   mounted() {
-    // 模拟后台获取数据
-    const netData = [{
-      id: 1,
-      title: '一级 1',
-      childList: [{
-        id: 4,
-        title: '二级 1-1',
-        childList: [{
-          id: 9,
-          title: '三级 1-1-1',
-          childList: [
-            {
-              id: 11,
-              title: '四级 1-1-1-1'
-            },
-            {
-              id: 12,
-              title: '四级 1-1-1-2'
-            }
-          ]
-        }, {
-          id: 10,
-          title: '三级 1-1-2'
-        }]
-      }]
-    }, {
-      id: 2,
-      title: '一级 2',
-      childList: [{
-        id: 5,
-        title: '二级 2-1'
-      }, {
-        id: 6,
-        title: '二级 2-2'
-      }]
-    }, {
-      id: 3,
-      title: '一级 3',
-      childList: [{
-        id: 7,
-        title: '二级 3-1'
-      }, {
-        id: 8,
-        title: '二级 3-2'
-      }]
-    }]
+    const netData = [
+      {
+        creator: 'W9004553',
+        updateDate: 1616145259000,
+        iconName: 'new.png',
+        isDelete: 1,
+        icon:
+            'http://bdx-test.myoas.com/bdx/api/file/20210319171417bcd44640b43f41dd833f94b02a8dfe0b.PNG',
+        description: '描述：1',
+        pageSize: 10,
+        pictureName: '8.png',
+        sort: 1,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/202103191455192824ac51ed83443ebe6ccd6893712017.PNG',
+        pageIndex: 0,
+        updateBy: 'W9006026',
+        success: false,
+        titleCn: '1',
+        id: '4840906155275927552',
+        menus: [
+          {
+            creator: '80330126',
+            updateDate: 1616048987000,
+            isDelete: 1,
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4840906155275927552',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '！！！！，，，，%%',
+            id: '4869904674947276806',
+            menus: [
+              {
+                creator: '80330126',
+                updateDate: 1616049728000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276806',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '行尾空格测试    ',
+                id: '4869904674947276813',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489787000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276813',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '测试123',
+                    id: '4873800004126375965',
+                    menus: [],
+                    createDate: 1616151514000
+                  },
+                  {
+                    creator: 'W9006026',
+                    updateDate: 1617333428000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276813',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                    path: 'ROOT/111%2dwq/80266087/1',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '66666',
+                    id: '4912431104652500997',
+                    menus: [],
+                    createDate: 1617333428000
+                  },
+                  {
+                    creator: 'W9006026',
+                    updateDate: 1617333756000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276813',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                    path: 'ROOT/111%2dwq/80266087/1',
+                    pageIndex: 0,
+                    titleEn: '66668886ss',
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '66668886',
+                    id: '4914539589997486094',
+                    menus: [],
+                    createDate: 1617333573000
+                  }
+                ],
+                introduction: '',
+                createDate: 1616049728000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616050071000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276806',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '行首空格测试',
+                id: '4869904674947276814',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489769000,
+                    isDelete: 1,
+                    description:
+                        '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276814',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!8be6!!60c5!%2d!5bf9!!6bd4!!5206!!6790!.db',
+                    path:
+                        'ROOT/80066327/公司NPS项目/产品NPS/NPS详情%2d对比分析',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '这是一个测试报表',
+                    id: '4869904674947276851',
+                    menus: [],
+                    createDate: 1616056692000
+                  }
+                ],
+                introduction:
+                    '强 厉害 赞 真棒垃圾 辣鸡向上 上面向下 下面向左 左边向右 右边好 好的 ok 可以 行胜利 噢',
+                createDate: 1616050071000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616050296000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276806',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '行中   空格测试',
+                id: '4869904674947276815',
+                menus: [],
+                introduction: '',
+                createDate: 1616050296000
+              },
+              {
+                creator: 'W9006026',
+                updateDate: 1617332125000,
+                isDelete: 1,
+                description: '123456',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276806',
+                pageIndex: 0,
+                updateBy: 'W9006026',
+                success: false,
+                titleCn: '123456',
+                id: '4912431104652500992',
+                menus: [],
+                introduction: '123456',
+                createDate: 1617332125000
+              },
+              {
+                descriptionEn: '123456789',
+                creator: 'W9006026',
+                updateDate: 1617355929000,
+                isDelete: 1,
+                description: '12345678',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                introductionEn: '123456781',
+                parentId: '4869904674947276806',
+                pageIndex: 0,
+                titleEn: '12345678',
+                updateBy: '80326813',
+                success: false,
+                titleCn: '12345678',
+                id: '4914522272689340416',
+                menus: [],
+                introduction: '123456781',
+                createDate: 1617332309000
+              }
+            ],
+            introduction: '',
+            createDate: 1616048987000
+          },
+          {
+            creator: '80330126',
+            updateDate: 1616051098000,
+            isDelete: 1,
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4840906155275927552',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '测试测试',
+            id: '4869904674947276816',
+            menus: [
+              {
+                creator: '80330126',
+                updateDate: 1616051253000,
+                isDelete: 1,
+                description:
+                    '123456789abcdefghijk          123456789abcdefghijk          123456789abcdefghijk          123456789abcdefghijk          123456789abcdefghijk          123456789abcdefghijk          123456789abcdefghijk',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276816',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '测试一下',
+                id: '4869904674947276817',
+                menus: [
+                  {
+                    creator: 'W9006026',
+                    updateDate: 1616489748000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276817',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!!573a!!666f!%2d!5f00!!7bb1!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/场景%2d开箱',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '11111',
+                    id: '4873800004126375941',
+                    menus: [],
+                    createDate: 1616149288000
+                  }
+                ],
+                introduction: '再写一个简介',
+                createDate: 1616051253000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616052884000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276816',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '测试2下',
+                id: '4869904674947276826',
+                menus: [
+                  {
+                    creator: 'W9006026',
+                    updateDate: 1617692463000,
+                    isDelete: 1,
+                    description: 'ssssssssss',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276826',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: 'ssssssssss',
+                    id: '4914592985030918145',
+                    menus: [],
+                    introduction: 'ssssssssss',
+                    createDate: 1617692463000
+                  },
+                  {
+                    creator: 'W9006026',
+                    updateDate: 1617692480000,
+                    isDelete: 1,
+                    description: 'ssssssssss',
+                    pageSize: 10,
+                    sort: 1,
+                    type: 4,
+                    parentId: '4869904674947276826',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    bdxMenuPath: '顶级菜单/1/测试测试/测试2下',
+                    success: false,
+                    titleCn: 'ssssssssss',
+                    id: '4926897722736689152',
+                    menus: [],
+                    introduction: 'ssssssssss',
+                    createDate: 1617692480000
+                  }
+                ],
+                introduction: '',
+                createDate: 1616051832000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616052772000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276816',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '测试3下',
+                id: '4869904674947276827',
+                menus: [],
+                introduction: '',
+                createDate: 1616051850000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616052899000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276816',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '测试2下',
+                id: '4869904674947276828',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489687000,
+                    isDelete: 1,
+                    description:
+                        '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276828',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!89e6!!70b9!NPS!2f!!603b!!4f53!!8ba4!!77e5!!8868!!73b0!!2f!!4ea7!!54c1!!8ba4!!77e5!.db',
+                    path:
+                        'ROOT/80066327/公司NPS项目/触点NPS/总体认知表现/产品认知',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: 'ad!@##$$%%^&***',
+                    id: '4869904674947276858',
+                    menus: [],
+                    createDate: 1616058732000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489670000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276828',
+                    url:
+                        'http://10.177.241.225:443/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!17zyttest421!2f!!6d4b!!8bd5!0603.db',
+                    path: 'ROOT/17zyttest421/测试0603',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '报表test1',
+                    id: '4881990781637795842',
+                    menus: [],
+                    createDate: 1616394434000
+                  }
+                ],
+                introduction: '',
+                createDate: 1616052899000
+              }
+            ],
+            introduction: '',
+            createDate: 1616051098000
+          }
+        ],
+        introduction: '123',
+        createDate: 1615160937000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616481882000,
+        isDelete: 1,
+        description: '一级分类详细说明，一级分类详细说明，一级分类详细说明',
+        pageSize: 10,
+        pictureName: '123.png',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/20210323144405e710628bd4d449659ad7da22f6901ee5.PNG',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: '一级分类',
+        id: '4867506914964987904',
+        menus: [
+          {
+            creator: '80330126',
+            updateDate: 1616481968000,
+            iconName: '图片2.jpg',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/202103231445489499419acf1d4f6f8854e40893eb9939.JPG',
+            description: '这是二级分类详细说明，详细说明啊',
+            pageSize: 10,
+            pictureName: '123.png',
+            sort: 0,
+            type: 2,
+            parentId: '4867506914964987904',
+            picture:
+                'http://bdx-test.myoas.com/bdx/api/file/202103231445434b4d12c104504984a45506204f72920b.PNG',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '二级分类',
+            id: '4867506914964987905',
+            menus: [
+              {
+                creator: '80330126',
+                updateDate: 1616482215000,
+                iconName: 'cat.png',
+                isDelete: 1,
+                icon:
+                    'http://bdx-test.myoas.com/bdx/api/file/2021032314495200857f73cc164f4c9e34295a5839d61b.PNG',
+                description: '三级分类详细说明，详细说明啊',
+                pageSize: 10,
+                pictureName: '123.png',
+                sort: 0,
+                type: 3,
+                parentId: '4867506914964987905',
+                picture:
+                    'http://bdx-test.myoas.com/bdx/api/file/20210323144956112548f7c3e14902a9d63dd0078ba248.PNG',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '三级分类',
+                id: '4867506914964987906',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616485510000,
+                    iconName: 'cat.png',
+                    isDelete: 1,
+                    icon:
+                        'http://bdx-test.myoas.com/bdx/api/file/202103231544272ffa3a9853154df2ba389b7a19f03d60.PNG',
+                    description: '这是四级分类说明。这是四级分类说明。',
+                    pageSize: 10,
+                    pictureName: '123.png',
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    picture:
+                        'http://bdx-test.myoas.com/bdx/api/file/20210323154433f436c769cfd8436fa847d5c2b419b3a1.PNG',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '四级分类',
+                    id: '4867506914964987907',
+                    menus: [
+                      {
+                        creator: '80330126',
+                        updateDate: 1616048360000,
+                        isDelete: 1,
+                        description: '',
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4867506914964987907',
+                        pageIndex: 0,
+                        updateBy: '80330126',
+                        success: false,
+                        titleCn: '五级分类',
+                        id: '4869904674947276805',
+                        menus: [
+                          {
+                            creator: '80330126',
+                            updateDate: 1616049085000,
+                            isDelete: 1,
+                            description: '',
+                            pageSize: 10,
+                            sort: 0,
+                            type: 6,
+                            parentId: '4869904674947276805',
+                            pageIndex: 0,
+                            updateBy: '80330126',
+                            success: false,
+                            titleCn: '六级分类',
+                            id: '4869904674947276807',
+                            menus: [
+                              {
+                                creator: '80330126',
+                                updateDate: 1616049111000,
+                                isDelete: 1,
+                                description: '',
+                                pageSize: 10,
+                                sort: 0,
+                                type: 7,
+                                parentId: '4869904674947276807',
+                                pageIndex: 0,
+                                updateBy: '80330126',
+                                success: false,
+                                titleCn: '七级分类',
+                                id: '4869904674947276808',
+                                menus: [
+                                  {
+                                    creator: '80330126',
+                                    updateDate: 1616634029000,
+                                    isDelete: 1,
+                                    description: '',
+                                    pageSize: 10,
+                                    sort: 0,
+                                    type: 8,
+                                    parentId: '4869904674947276808',
+                                    pageIndex: 0,
+                                    updateBy: '80326813',
+                                    success: false,
+                                    titleCn: '八级分类',
+                                    id: '4869904674947276809',
+                                    menus: [
+                                      {
+                                        creator: '80330126',
+                                        updateDate: 1616049164000,
+                                        isDelete: 1,
+                                        description: '',
+                                        pageSize: 10,
+                                        sort: 0,
+                                        type: 9,
+                                        parentId: '4869904674947276809',
+                                        pageIndex: 0,
+                                        updateBy: '80330126',
+                                        success: false,
+                                        titleCn: '九级分类',
+                                        id: '4869904674947276810',
+                                        menus: [
+                                          {
+                                            creator: '80330126',
+                                            updateDate: 1616151009000,
+                                            isDelete: 1,
+                                            description: '',
+                                            pageSize: 10,
+                                            sort: 0,
+                                            type: 10,
+                                            parentId: '4869904674947276810',
+                                            pageIndex: 0,
+                                            updateBy: '80330126',
+                                            success: false,
+                                            titleCn: '十级分类',
+                                            id: '4869904674947276811',
+                                            menus: [
+                                              {
+                                                creator: '80330126',
+                                                updateDate: 1616150983000,
+                                                isDelete: 1,
+                                                description: '',
+                                                pageSize: 10,
+                                                sort: 0,
+                                                type: 11,
+                                                parentId: '4869904674947276811',
+                                                pageIndex: 0,
+                                                updateBy: '80330126',
+                                                success: false,
+                                                titleCn: '十一级分类',
+                                                id: '4869904674947276812',
+                                                menus: [],
+                                                introduction: '',
+                                                createDate: 1616049219000
+                                              }
+                                            ],
+                                            introduction: '',
+                                            createDate: 1616049192000
+                                          },
+                                          {
+                                            creator: '80330126',
+                                            updateDate: 1616486213000,
+                                            isDelete: 1,
+                                            description: '',
+                                            pageSize: 10,
+                                            sort: 0,
+                                            type: 10,
+                                            parentId: '4869904674947276810',
+                                            pageIndex: 0,
+                                            updateBy: 'W9006026',
+                                            success: false,
+                                            titleCn: '十级分类',
+                                            id: '4873800004126375962',
+                                            menus: [
+                                              {
+                                                creator: '80330126',
+                                                updateDate: 1616489634000,
+                                                isDelete: 1,
+                                                pageSize: 10,
+                                                sort: 0,
+                                                type: 11,
+                                                parentId: '4873800004126375962',
+                                                url:
+                                                    '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!8be6!!60c5!%2d!5bf9!!6bd4!!5206!!6790!.db',
+                                                path:
+                                                    'ROOT/80066327/公司NPS项目/产品NPS/NPS详情%2d对比分析',
+                                                pageIndex: 0,
+                                                updateBy: 'W9006026',
+                                                success: false,
+                                                titleCn:
+                                                    '十级分类下报表测试001',
+                                                id: '4882357090808545287',
+                                                menus: [],
+                                                createDate: 1616465960000
+                                              }
+                                            ],
+                                            introduction: '',
+                                            createDate: 1616151040000
+                                          },
+                                          {
+                                            creator: '80330126',
+                                            updateDate: 1616489528000,
+                                            isDelete: 1,
+                                            pageSize: 10,
+                                            sort: 0,
+                                            type: 10,
+                                            parentId: '4869904674947276810',
+                                            url:
+                                                '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                                            path:
+                                                'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                                            pageIndex: 0,
+                                            updateBy: 'W9006026',
+                                            success: false,
+                                            titleCn: '九级分类下的报表',
+                                            id: '4885446615403397120',
+                                            menus: [],
+                                            createDate: 1616487134000
+                                          }
+                                        ],
+                                        introduction: '',
+                                        createDate: 1616049164000
+                                      }
+                                    ],
+                                    introduction: '八级分类的简介',
+                                    createDate: 1616049131000
+                                  }
+                                ],
+                                introduction: '',
+                                createDate: 1616049111000
+                              }
+                            ],
+                            introduction: '',
+                            createDate: 1616049085000
+                          },
+                          {
+                            creator: 'W9006026',
+                            updateDate: 1617691631000,
+                            isDelete: 1,
+                            pageSize: 10,
+                            sort: 5,
+                            type: 6,
+                            parentId: '4869904674947276805',
+                            url:
+                                '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                            path: 'ROOT/111%2dwq/80266087/1',
+                            pageIndex: 0,
+                            updateBy: 'W9006026',
+                            success: false,
+                            titleCn: 'testsort',
+                            id: '4926859033671278592',
+                            menus: [],
+                            createDate: 1617691631000
+                          },
+                          {
+                            creator: 'W9006026',
+                            updateDate: 1617691637000,
+                            isDelete: 1,
+                            pageSize: 10,
+                            sort: 4,
+                            type: 6,
+                            parentId: '4869904674947276805',
+                            url:
+                                '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                            path: 'ROOT/111%2dwq/80266087/1',
+                            pageIndex: 0,
+                            updateBy: 'W9006026',
+                            success: false,
+                            titleCn: 'testsort',
+                            id: '4926859033671278594',
+                            menus: [],
+                            createDate: 1617691637000
+                          },
+                          {
+                            creator: 'W9006026',
+                            updateDate: 1617691721000,
+                            isDelete: 1,
+                            pageSize: 10,
+                            sort: 3,
+                            type: 6,
+                            parentId: '4869904674947276805',
+                            url:
+                                '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                            path: 'ROOT/111%2dwq/80266087/1',
+                            pageIndex: 0,
+                            updateBy: 'W9006026',
+                            success: false,
+                            titleCn: 'testsort',
+                            id: '4926859033671278596',
+                            menus: [],
+                            createDate: 1617691721000
+                          },
+                          {
+                            creator: 'W9006026',
+                            updateDate: 1617691775000,
+                            isDelete: 1,
+                            pageSize: 10,
+                            sort: 2,
+                            type: 6,
+                            parentId: '4869904674947276805',
+                            url:
+                                '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                            path: 'ROOT/111%2dwq/80266087/1',
+                            pageIndex: 0,
+                            updateBy: 'W9006026',
+                            success: false,
+                            titleCn: 'testsort1',
+                            id: '4926859033671278600',
+                            menus: [],
+                            createDate: 1617691775000
+                          },
+                          {
+                            creator: 'W9006026',
+                            updateDate: 1617691789000,
+                            isDelete: 1,
+                            pageSize: 10,
+                            sort: 1,
+                            type: 6,
+                            parentId: '4869904674947276805',
+                            url:
+                                '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                            path: 'ROOT/111%2dwq/80266087/1',
+                            pageIndex: 0,
+                            updateBy: 'W9006026',
+                            success: false,
+                            titleCn: 'testsort21',
+                            id: '4926859033671278604',
+                            menus: [],
+                            createDate: 1617691789000
+                          }
+                        ],
+                        introduction: '五级分类',
+                        createDate: 1616048360000
+                      },
+                      {
+                        creator: '80330126',
+                        updateDate: 1616489729000,
+                        isDelete: 1,
+                        description:
+                            '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4867506914964987907',
+                        url:
+                            '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!!573a!!666f!%2d!5f00!!7bb1!%5f!5bf9!!6bd4!.db',
+                        path:
+                            'ROOT/80066327/公司NPS项目/产品NPS/场景%2d开箱%5f对比',
+                        pageIndex: 0,
+                        updateBy: 'W9006026',
+                        success: false,
+                        titleCn: '2021年测试报表Qwer',
+                        id: '4872999044265238621',
+                        menus: [],
+                        createDate: 1616136389000
+                      }
+                    ],
+                    introduction: '这是四级分类简介',
+                    createDate: 1616032023000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489837000,
+                    isDelete: 1,
+                    description:
+                        '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                    path: 'ROOT/111%2dwq/80266087/1',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '123',
+                    id: '4869904674947276846',
+                    menus: [],
+                    createDate: 1616056419000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489709000,
+                    isDelete: 1,
+                    description:
+                        '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!!573a!!666f!%2d!8bbe!!7f6e!!65b0!!673a!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/场景%2d设置新机',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '2021年财务报表测试AAaa',
+                    id: '4872999044265238616',
+                    menus: [],
+                    createDate: 1616136132000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616489616000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!8be6!!60c5!%2d!5bf9!!6bd4!!5206!!6790!.db',
+                    path:
+                        'ROOT/80066327/公司NPS项目/产品NPS/NPS详情%2d对比分析',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '测试选中_le',
+                    id: '4884808589421633538',
+                    menus: [],
+                    createDate: 1616480567000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616489598000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!8be6!!60c5!%2d!5bf9!!6bd4!!5206!!6790!.db',
+                    path:
+                        'ROOT/80066327/公司NPS项目/产品NPS/NPS详情%2d对比分析',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '递归只选中叶子节点',
+                    id: '4884808589421633546',
+                    menus: [],
+                    createDate: 1616481735000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616489512000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: 'ceshi_liangen',
+                    id: '4885488843521859584',
+                    menus: [],
+                    createDate: 1616487572000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616489486000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4867506914964987906',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '哈哈_liangen',
+                    id: '4885488843521859588',
+                    menus: [],
+                    createDate: 1616487652000
+                  }
+                ],
+                introduction: '这是三级分类简介',
+                createDate: 1616031992000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616150896000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4867506914964987905',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '三级子分类',
+                id: '4873800004126375961',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489574000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4873800004126375961',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '报表007',
+                    id: '4884808589421633552',
+                    menus: [],
+                    createDate: 1616482697000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489554000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4873800004126375961',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '报表008',
+                    id: '4884808589421633570',
+                    menus: [],
+                    createDate: 1616482748000
+                  }
+                ],
+                introduction: '',
+                createDate: 1616150896000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616151119000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4867506914964987905',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '一级分类',
+                id: '4873800004126375963',
+                menus: [],
+                introduction: '',
+                createDate: 1616151119000
+              }
+            ],
+            introduction: '这是二级分类简介',
+            createDate: 1616030362000
+          },
+          {
+            creator: '80330126',
+            updateDate: 1616134773000,
+            isDelete: 1,
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4867506914964987904',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '二级子分类',
+            id: '4872999044265238613',
+            menus: [
+              {
+                creator: '80330126',
+                updateDate: 1616485438000,
+                iconName: '图片2.jpg',
+                isDelete: 1,
+                icon:
+                    'http://bdx-test.myoas.com/bdx/api/file/202103231543375002d0c24ad942c1b306e43a20564e5d.JPG',
+                description:
+                    '三级子分类详细说明。三级子分类详细说明。三级子分类详细说明。三级子分类详细说明。三级子分类详细说明。三级子分类详细说明。三级子分类详细说明。',
+                pageSize: 10,
+                pictureName: '123.png',
+                sort: 0,
+                type: 3,
+                parentId: '4872999044265238613',
+                picture:
+                    'http://bdx-test.myoas.com/bdx/api/file/20210323154341540c9796cded44e5b40710351963c801.PNG',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '三级子分类',
+                id: '4884808589421633609',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616488037000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4884808589421633609',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '四级子分类',
+                    id: '4885488843521859606',
+                    menus: [
+                      {
+                        creator: '80330126',
+                        updateDate: 1616488121000,
+                        isDelete: 1,
+                        description: '',
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4885488843521859606',
+                        pageIndex: 0,
+                        updateBy: '80330126',
+                        success: false,
+                        titleCn: '五级子分类',
+                        id: '4885488843521859607',
+                        menus: [
+                          {
+                            creator: '80330126',
+                            updateDate: 1616488195000,
+                            isDelete: 1,
+                            description: '',
+                            pageSize: 10,
+                            sort: 0,
+                            type: 6,
+                            parentId: '4885488843521859607',
+                            pageIndex: 0,
+                            updateBy: '80330126',
+                            success: false,
+                            titleCn: '六级子分类',
+                            id: '4885488843521859608',
+                            menus: [
+                              {
+                                creator: '80330126',
+                                updateDate: 1616491209000,
+                                isDelete: 1,
+                                description: '',
+                                pageSize: 10,
+                                sort: 0,
+                                type: 7,
+                                parentId: '4885488843521859608',
+                                pageIndex: 0,
+                                updateBy: '80330126',
+                                success: false,
+                                titleCn: '七级子分类',
+                                id: '4885488843521859609',
+                                menus: [],
+                                introduction: '',
+                                createDate: 1616488289000
+                              },
+                              {
+                                creator: '80330126',
+                                updateDate: 1616576045000,
+                                isDelete: 1,
+                                pageSize: 10,
+                                sort: 0,
+                                type: 7,
+                                parentId: '4885488843521859608',
+                                url:
+                                    '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                                path:
+                                    'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                                pageIndex: 0,
+                                updateBy: '80330126',
+                                success: false,
+                                titleCn: '六级子分类报表测试',
+                                id: '4888024592213508113',
+                                menus: [],
+                                createDate: 1616576045000
+                              }
+                            ],
+                            introduction: '',
+                            createDate: 1616488195000
+                          }
+                        ],
+                        introduction: '',
+                        createDate: 1616488121000
+                      }
+                    ],
+                    introduction: '',
+                    createDate: 1616488037000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489864000,
+                    isDelete: 1,
+                    description:
+                        '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4884808589421633609',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                    path: 'ROOT/111%2dwq/80266087/1',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '2020年营销报表测试123',
+                    id: '4869904674947276861',
+                    menus: [],
+                    createDate: 1616060342000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616489466000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4884808589421633609',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '三级子分类测试报表001',
+                    id: '4885488843521859592',
+                    menus: [],
+                    createDate: 1616487828000
+                  }
+                ],
+                introduction: '三级子分类简介',
+                createDate: 1616485438000
+              }
+            ],
+            introduction: '',
+            createDate: 1616134773000
+          },
+          {
+            creator: 'W9006026',
+            updateDate: 1617690855000,
+            isDelete: 1,
+            description: 'testsort1',
+            pageSize: 10,
+            sort: 4,
+            type: 2,
+            parentId: '4867506914964987904',
+            pageIndex: 0,
+            updateBy: 'W9006026',
+            bdxMenuPath: '一级分类/顶级菜单',
+            success: false,
+            titleCn: 'testsort',
+            id: '4926832954629832705',
+            menus: [],
+            introduction: 'testsort1',
+            createDate: 1617690855000
+          },
+          {
+            creator: 'W9006026',
+            updateDate: 1617690887000,
+            isDelete: 1,
+            description: 'testsort',
+            pageSize: 10,
+            sort: 3,
+            type: 2,
+            parentId: '4867506914964987904',
+            pageIndex: 0,
+            updateBy: 'W9006026',
+            bdxMenuPath: '一级分类/顶级菜单',
+            success: false,
+            titleCn: 'testsort',
+            id: '4926832954629832706',
+            menus: [],
+            introduction: 'testsort',
+            createDate: 1617690887000
+          },
+          {
+            creator: 'W9006026',
+            updateDate: 1617690923000,
+            isDelete: 1,
+            description: 'testsort2',
+            pageSize: 10,
+            sort: 2,
+            type: 2,
+            parentId: '4867506914964987904',
+            pageIndex: 0,
+            updateBy: 'W9006026',
+            bdxMenuPath: '一级分类/顶级菜单',
+            success: false,
+            titleCn: 'testsort2',
+            id: '4926832954629832707',
+            menus: [],
+            introduction: 'testsort2',
+            createDate: 1617690923000
+          },
+          {
+            creator: 'W9006026',
+            updateDate: 1617691203000,
+            isDelete: 1,
+            description: 'testsort3',
+            pageSize: 10,
+            sort: 1,
+            type: 2,
+            parentId: '4867506914964987904',
+            pageIndex: 0,
+            updateBy: 'W9006026',
+            bdxMenuPath: '一级分类/顶级菜单',
+            success: false,
+            titleCn: 'testsort3',
+            id: '4926854910502666240',
+            menus: [],
+            introduction: 'testsort3',
+            createDate: 1617691203000
+          }
+        ],
+        introduction: '这是一个一级分类',
+        createDate: 1616030314000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616395595000,
+        iconName: '图片2.png',
+        isDelete: 1,
+        icon:
+            'http://bdx-test.myoas.com/bdx/api/file/202103221446142d936be976bd4f75be9302e333339248.PNG',
+        description: 'coo系统详细说明',
+        pageSize: 10,
+        pictureName: '图片2.jpg',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/20210322144618ad6cd60bc3ea43b6af415589399cd5b5.JPG',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: 'coo系统',
+        id: '4869904674947276801',
+        menus: [
+          {
+            creator: '80330126',
+            updateDate: 1616384780000,
+            isDelete: 1,
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4869904674947276801',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '流程it中心',
+            id: '4869904674947276802',
+            menus: [
+              {
+                creator: '80330126',
+                updateDate: 1616469062000,
+                iconName: '图片2.jpg',
+                isDelete: 1,
+                icon:
+                    'http://bdx-test.myoas.com/bdx/api/file/202103231110599727bfdd2f7b4f6e83039a9624878cb6.JPG',
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276802',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '平台IT部',
+                id: '4869904674947276803',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616048247000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276803',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '测试组',
+                    id: '4869904674947276804',
+                    menus: [
+                      {
+                        creator: '80330126',
+                        updateDate: 1616489796000,
+                        isDelete: 1,
+                        description:
+                            '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4869904674947276804',
+                        url:
+                            '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                        path: 'ROOT/111%2dwq/80266087/1',
+                        pageIndex: 0,
+                        updateBy: 'W9006026',
+                        success: false,
+                        titleCn: '测试财务报表20120318Ab',
+                        id: '4869904674947276835',
+                        menus: [],
+                        createDate: 1616056208000
+                      },
+                      {
+                        creator: '80330126',
+                        updateDate: 1616126196000,
+                        isDelete: 1,
+                        description:
+                            '描述：报报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表报表表报表',
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4869904674947276804',
+                        url:
+                            '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!111%2dwq!2f!80266087!2f!1.db',
+                        path: 'ROOT/111-wq/80266087/1',
+                        pageIndex: 0,
+                        updateBy: '80330126',
+                        success: false,
+                        titleCn: '报表测试2021AAcc',
+                        id: '4872999044265238538',
+                        menus: [],
+                        createDate: 1616126196000
+                      },
+                      {
+                        creator: '80330126',
+                        updateDate: 1616489651000,
+                        isDelete: 1,
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4869904674947276804',
+                        url:
+                            '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                        path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                        pageIndex: 0,
+                        updateBy: 'W9006026',
+                        success: false,
+                        titleCn: 'NPS概览',
+                        id: '4882357090808545284',
+                        menus: [],
+                        createDate: 1616405582000
+                      }
+                    ],
+                    introduction: '',
+                    createDate: 1616048247000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616051624000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276803',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '移动产品组',
+                    id: '4869904674947276820',
+                    menus: [],
+                    introduction: '',
+                    createDate: 1616051624000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616051649000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276803',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '技术平台组',
+                    id: '4869904674947276821',
+                    menus: [],
+                    introduction: '',
+                    createDate: 1616051649000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616051698000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276803',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '办公产品组',
+                    id: '4869904674947276822',
+                    menus: [],
+                    introduction: '',
+                    createDate: 1616051698000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616051716000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276803',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: 'UED组',
+                    id: '4869904674947276823',
+                    menus: [],
+                    introduction: '',
+                    createDate: 1616051716000
+                  },
+                  {
+                    creator: '80330126',
+                    updateDate: 1616051732000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4869904674947276803',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: 'hr产品组',
+                    id: '4869904674947276824',
+                    menus: [],
+                    introduction: '',
+                    createDate: 1616051732000
+                  }
+                ],
+                introduction: '',
+                createDate: 1616048230000
+              }
+            ],
+            introduction: '',
+            createDate: 1616048212000
+          },
+          {
+            creator: '80330126',
+            updateDate: 1616503064000,
+            isDelete: 1,
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4869904674947276801',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '质量部',
+            id: '4869904674947276818',
+            menus: [
+              {
+                creator: '80330126',
+                updateDate: 1616051573000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276818',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '质量体系组',
+                id: '4869904674947276819',
+                menus: [],
+                introduction: '',
+                createDate: 1616051573000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616051778000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4869904674947276818',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '体系认证组',
+                id: '4869904674947276825',
+                menus: [],
+                introduction: '',
+                createDate: 1616051778000
+              }
+            ],
+            introduction:
+                '做一个很长很长的简介啊！！！ 这个简介有多长。也就50个字符的长度。再来试下字符长度吗。abcdef',
+            createDate: 1616051555000
+          },
+          {
+            creator: '80330126',
+            updateDate: 1616395260000,
+            iconName: '图片2.jpg',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/20210322144040a55120e790ac49b3b4807950977ce515.JPG',
+            description: '详细说明细这个二级分类',
+            pageSize: 10,
+            pictureName: '图片2.png',
+            sort: 0,
+            type: 2,
+            parentId: '4869904674947276801',
+            picture:
+                'http://bdx-test.myoas.com/bdx/api/file/20210322144046abf84e705ad64b578ec8590eeb03c02f.PNG',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '二级分类',
+            id: '4873800004126375964',
+            menus: [],
+            introduction: '这是coo系统的二级分类',
+            createDate: 1616151186000
+          }
+        ],
+        introduction: 'coo系统简介',
+        createDate: 1616048175000
+      },
+      {
+        creator: 'W9009955',
+        updateDate: 1616148159000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        pictureName: 'operationalAnalysis.png',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/2021031918023452ad7c65322045c7be12fb683c19d562.PNG',
+        pageIndex: 0,
+        updateBy: 'W9009955',
+        success: false,
+        titleCn: '测试数据菜单一',
+        id: '4873800004126375938',
+        menus: [
+          {
+            creator: 'W9009955',
+            updateDate: 1616462819000,
+            iconName: '图片2.png',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/20210323092523f2a5049a60254a10b7ac75ac139bcf86.PNG',
+            description: '详细说明下菜单的样式和图片的格式！',
+            pageSize: 10,
+            pictureName: 'subBanner.png',
+            sort: 0,
+            type: 2,
+            parentId: '4873800004126375938',
+            picture:
+                'http://bdx-test.myoas.com/bdx/api/file/202103191803303a1ceaba02e24699baab1c8e80b34b0f.PNG',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '菜单二和撒花实话实说',
+            id: '4873800004126375939',
+            menus: [
+              {
+                creator: 'W9009955',
+                updateDate: 1616469572000,
+                iconName: 'banner.png',
+                isDelete: 1,
+                icon:
+                    'http://bdx-test.myoas.com/bdx/api/file/20210323111918451aa3255a624d7d93e3bab14540fb96.PNG',
+                description: '是个啥地方个梵蒂冈梵蒂冈梵蒂冈法定',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4873800004126375939',
+                pageIndex: 0,
+                updateBy: 'W9009867',
+                success: false,
+                titleCn: '菜单三dsfsd大幅',
+                id: '4873800004126375940',
+                menus: [
+                  {
+                    creator: 'W9009955',
+                    updateDate: 1616149289000,
+                    isDelete: 1,
+                    description: '说法第三方第三方第三方丰富的舒服舒服',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4873800004126375940',
+                    pageIndex: 0,
+                    updateBy: 'W9009955',
+                    success: false,
+                    titleCn: '菜单四非官方个梵蒂冈',
+                    id: '4873800004126375947',
+                    menus: [
+                      {
+                        creator: 'W9009955',
+                        updateDate: 1616149312000,
+                        isDelete: 1,
+                        description: '分布广东分公司的个人谈话人的表格郭德纲',
+                        pageSize: 10,
+                        sort: 0,
+                        type: 5,
+                        parentId: '4873800004126375947',
+                        pageIndex: 0,
+                        updateBy: 'W9009955',
+                        success: false,
+                        titleCn: '菜单五',
+                        id: '4873800004126375948',
+                        menus: [],
+                        introduction:
+                            '的范德萨范德萨范德萨发斯蒂芬斯蒂芬地址发斯蒂芬',
+                        createDate: 1616149312000
+                      }
+                    ],
+                    introduction: '水电费第三方第三方是否发生的',
+                    createDate: 1616149289000
+                  },
+                  {
+                    creator: 'W9009955',
+                    updateDate: 1616489783000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4873800004126375940',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!6982!!89c8!.db',
+                    path: 'ROOT/80066327/公司NPS项目/产品NPS/NPS概览',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '报表一',
+                    id: '4873800004126375949',
+                    menus: [],
+                    createDate: 1616149395000
+                  },
+                  {
+                    creator: 'W9009955',
+                    updateDate: 1616489760000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4873800004126375940',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!4ea7!!54c1!NPS!2f!NPS!8be6!!60c5!%2d!7ec4!!5408!!5206!!6790!.db',
+                    path:
+                        'ROOT/80066327/公司NPS项目/产品NPS/NPS详情%2d组合分析',
+                    pageIndex: 0,
+                    updateBy: 'W9006026',
+                    success: false,
+                    titleCn: '报表2',
+                    id: '4873800004126375955',
+                    menus: [],
+                    createDate: 1616149419000
+                  }
+                ],
+                introduction: '的放松放松法水电费水电费水电费第三方付',
+                createDate: 1616149268000
+              }
+            ],
+            introduction: '的沙发斯蒂芬申达股份十多个水电费规范',
+            createDate: 1616148234000
+          }
+        ],
+        introduction: '任务分团委偶尔我偶尔为哦个围殴覅借我',
+        createDate: 1616148159000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616393581000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        pictureName: '图片2.jpg',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/2021032214125772341d6c0fa0407286998597a4608331.JPG',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: 'test1',
+        id: '4881990781637795840',
+        menus: [],
+        introduction: '',
+        createDate: 1616393581000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616397011000,
+        iconName: '图片2.jpg',
+        isDelete: 1,
+        icon:
+            'http://bdx-test.myoas.com/bdx/api/file/20210322150959a42eb92507fe4545a6b11759895087f8.JPG',
+        description: 'test2详细说明',
+        pageSize: 10,
+        pictureName: '图片2.png',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/202103221510099890122eff314714b156eed69e015b8f.PNG',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: 'test2',
+        id: '4882357090808545280',
+        menus: [],
+        introduction: 'test2简介',
+        createDate: 1616397011000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616397062000,
+        iconName: '图片2.jpg',
+        isDelete: 1,
+        icon:
+            'http://bdx-test.myoas.com/bdx/api/file/20210322151051deb1edbda4e949bb92508a20aad04949.JPG',
+        description: 'test3详细说明',
+        pageSize: 10,
+        pictureName: '图片2.png',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/2021032215110090b8aa86d8d54737b76e2911c8889364.PNG',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: 'test3',
+        id: '4882357090808545281',
+        menus: [],
+        introduction: 'test3简介',
+        createDate: 1616397062000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616398483000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: '测试数据菜单二',
+        id: '4882357090808545282',
+        menus: [],
+        introduction: '',
+        createDate: 1616398483000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616398498000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: '测试数据菜单三',
+        id: '4882357090808545283',
+        menus: [],
+        introduction: '',
+        createDate: 1616398498000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616416909000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: 'qqqqqqq',
+        id: '4882357090808545285',
+        menus: [],
+        introduction: '',
+        createDate: 1616416909000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616554518000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: '测试数据菜单四001',
+        id: '4887735008338468864',
+        menus: [
+          {
+            creator: '80330126',
+            updateDate: 1616570221000,
+            isDelete: 1,
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4887735008338468864',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '测试菜单四子类名称a',
+            id: '4888024592213508097',
+            menus: [],
+            introduction: '',
+            createDate: 1616570221000
+          }
+        ],
+        introduction: '',
+        createDate: 1616554518000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616570638000,
+        iconName: 'cat.png',
+        isDelete: 1,
+        icon:
+            'http://bdx-test.myoas.com/bdx/api/file/202103241522266814d3c169a34c30bc9912927b0b940e.PNG',
+        description: '详细说明',
+        pageSize: 10,
+        pictureName: '宽高21.JPG',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/202103241523326e1e131d02704c14a3bd3f8d8f032c58.JPG',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: '测试数据菜单五001',
+        id: '4887735008338468865',
+        menus: [
+          {
+            creator: '80330126',
+            updateDate: 1616570491000,
+            iconName: '图片2.jpg',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/20210324152127bbc76c13e3f64faab1d25aa4723ccb66.JPG',
+            description: '',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4887735008338468865',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '12abcd123天',
+            id: '4888024592213508099',
+            menus: [],
+            introduction: '简单介绍一下这个分类',
+            createDate: 1616570491000
+          }
+        ],
+        introduction: '',
+        createDate: 1616554533000
+      },
+      {
+        creator: '80330126',
+        updateDate: 1616554543000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: '80330126',
+        success: false,
+        titleCn: '测试数据菜单四002',
+        id: '4887735008338468866',
+        menus: [
+          {
+            creator: '80330126',
+            updateDate: 1616570362000,
+            iconName: 'cat.png',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/2021032415183764eacf348d634f838c08eefb761dc161.PNG',
+            description: '',
+            pageSize: 10,
+            pictureName: 'cat123.png',
+            sort: 0,
+            type: 2,
+            parentId: '4887735008338468866',
+            picture:
+                'http://bdx-test.myoas.com/bdx/api/file/20210324151919ba8218af49e04470a205d50a1daa5171.PNG',
+            pageIndex: 0,
+            updateBy: '80330126',
+            success: false,
+            titleCn: '测试菜单aabb子类',
+            id: '4888024592213508098',
+            menus: [
+              {
+                creator: 'W9004553',
+                updateDate: 1616572713000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4888024592213508098',
+                pageIndex: 0,
+                updateBy: 'W9004553',
+                success: false,
+                titleCn: 'ceshi003',
+                id: '4888024592213508103',
+                menus: [
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616574874000,
+                    isDelete: 1,
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508103',
+                    pageIndex: 0,
+                    updateBy: 'W9004553',
+                    success: false,
+                    titleCn: '测试004',
+                    id: '4888024592213508104',
+                    menus: [],
+                    introduction: '',
+                    createDate: 1616574874000
+                  }
+                ],
+                introduction: '',
+                createDate: 1616572713000
+              },
+              {
+                creator: '80330126',
+                updateDate: 1616635772000,
+                isDelete: 1,
+                description: '',
+                pageSize: 10,
+                sort: 0,
+                type: 3,
+                parentId: '4888024592213508098',
+                pageIndex: 0,
+                updateBy: '80330126',
+                success: false,
+                titleCn: '新增分类测试',
+                id: '4888024592213508129',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616635769000,
+                    iconName: 'cat.png',
+                    isDelete: 1,
+                    icon:
+                        'http://bdx-test.myoas.com/bdx/api/file/20210324165859b657645c096841d2acaa0ec52ab718e1.PNG',
+                    description: '',
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508129',
+                    pageIndex: 0,
+                    updateBy: '80330126',
+                    success: false,
+                    titleCn: '新增分类测试001',
+                    id: '4888024592213508130',
+                    menus: [],
+                    introduction: '新增分类测试001',
+                    createDate: 1616576343000
+                  }
+                ],
+                introduction: '新增分类测试简介',
+                createDate: 1616576245000
+              }
+            ],
+            introduction:
+                '测试菜单aabb子类简介一下，测试菜单aabb子类简介一下。123456789、   aaaccc9',
+            createDate: 1616570362000
+          }
+        ],
+        introduction: '',
+        createDate: 1616554543000
+      },
+      {
+        creator: 'W9004553',
+        updateDate: 1616572535000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: 'W9004553',
+        success: false,
+        titleCn: '测试目录_02',
+        id: '4888024592213508100',
+        menus: [],
+        introduction: 'this is a test',
+        createDate: 1616572535000
+      },
+      {
+        creator: 'W9004553',
+        updateDate: 1616583247000,
+        iconName: 'p5.jpg',
+        isDelete: 1,
+        icon:
+            'http://bdx-test.myoas.com/bdx/api/file/20210324180423a08378032cfb4f448457d8020306a04f.JPG',
+        description: '后悔创立了阿里巴巴的马云-吹牛逼，汪汪汪',
+        pageSize: 10,
+        pictureName: 'card_01.png',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/202103241854041134e85ae67246378364fd15726d9b15.PNG',
+        pageIndex: 0,
+        updateBy: 'W9004553',
+        success: false,
+        titleCn: '悔创al_jack马',
+        id: '4888024592213508135',
+        menus: [
+          {
+            creator: 'W9004553',
+            updateDate: 1616657856000,
+            iconName: 'icon_card_驾驶舱总览.png',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/202103241911304697517b9de94127b15621a77af8ba77.PNG',
+            description:
+                '阿里云平台-阿里巴巴集团淘宝网天猫全球速卖通阿里巴巴国际交易市场1688阿里妈妈飞猪阿里云计算AliOS万网高德UC友盟优酷钉钉支付宝达摩院淘宝海外阿里云盘 © 2009-2021',
+            pageSize: 10,
+            pictureName: '内页_banner.png',
+            sort: 0,
+            type: 2,
+            parentId: '4888024592213508135',
+            picture:
+                'http://bdx-test.myoas.com/bdx/api/file/20210324195707e00b81be78994425a78d1c3448cf091e.PNG',
+            pageIndex: 0,
+            updateBy: 'W9009867',
+            success: false,
+            titleCn: '阿里云',
+            id: '4888024592213508139',
+            menus: [
+              {
+                creator: 'W9004553',
+                updateDate: 1616633604000,
+                iconName: 'icon_card_品质.png',
+                isDelete: 1,
+                icon:
+                    'http://bdx-test.myoas.com/bdx/api/file/20210325085257184337ddb429430d802227c4e774d27e.PNG',
+                description: '财务报表-最近一月的财务报表',
+                pageSize: 10,
+                pictureName: 'icon_card_品质.png',
+                sort: 0,
+                type: 3,
+                parentId: '4888024592213508139',
+                picture:
+                    'http://bdx-test.myoas.com/bdx/api/file/202103250853033b073ed777934dffb2a76d077c9bfadc.PNG',
+                pageIndex: 0,
+                updateBy: 'W9004553',
+                success: false,
+                titleCn: '财务报表',
+                id: '4888024592213508143',
+                menus: [
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616635711000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508143',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!NPS!6708!!62a5!!2f!!4ea7!!54c1!!6708!!62a5!.db',
+                    path: 'ROOT/80066327/NPS月报/产品月报',
+                    pageIndex: 0,
+                    updateBy: 'W9004553',
+                    success: false,
+                    titleCn: '第一季度财务报表',
+                    id: '4888024592213508149',
+                    menus: [],
+                    createDate: 1616635023000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616635813000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508143',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!NPS!6708!!62a5!!2f!!4ea7!!54c1!!6708!!62a5!.db',
+                    path: 'ROOT/80066327/NPS月报/产品月报',
+                    pageIndex: 0,
+                    updateBy: 'W9004553',
+                    success: false,
+                    titleCn: '第二季度财务报表',
+                    id: '4888024592213508164',
+                    menus: [],
+                    createDate: 1616635813000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616657883000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508143',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!670d!!52a1!NPS!2f!!95ed!!73af!!7ba1!!7406!!5904!!7406!!8be6!!60c5!.db',
+                    path: 'ROOT/80066327/公司NPS项目/服务NPS/闭环管理处理详情',
+                    pageIndex: 0,
+                    updateBy: 'W9009867',
+                    success: false,
+                    titleCn: '第三季度',
+                    id: '4888024592213508176',
+                    menus: [],
+                    createDate: 1616635853000
+                  },
+                  {
+                    creator: 'W9004553',
+                    updateDate: 1616635907000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508143',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!NPS!6708!!62a5!!2f!!4ea7!!54c1!!6708!!62a5!.db',
+                    path: 'ROOT/80066327/NPS月报/产品月报',
+                    pageIndex: 0,
+                    updateBy: 'W9004553',
+                    success: false,
+                    titleCn: '第四季度财务报表',
+                    id: '4888024592213508190',
+                    menus: [],
+                    createDate: 1616635907000
+                  }
+                ],
+                introduction: '财务报表-财务收入',
+                createDate: 1616633604000
+              },
+              {
+                creator: 'W9004553',
+                updateDate: 1616633676000,
+                iconName: 'icon_card_驾驶舱总览.png',
+                isDelete: 1,
+                icon:
+                    'http://bdx-test.myoas.com/bdx/api/file/2021032508540455fe9e645f69480da25bf4c13aa5ca3c.PNG',
+                description: '人事报表-最近一个月的人事变动等详情',
+                pageSize: 10,
+                pictureName: 'icon_card_驾驶舱总览.png',
+                sort: 0,
+                type: 3,
+                parentId: '4888024592213508139',
+                picture:
+                    'http://bdx-test.myoas.com/bdx/api/file/20210325085409844b0b0be80d414699b27f04e944c3ab.PNG',
+                pageIndex: 0,
+                updateBy: 'W9004553',
+                success: false,
+                titleCn: '人事报表',
+                id: '4888024592213508144',
+                menus: [
+                  {
+                    creator: '80330126',
+                    updateDate: 1616657791000,
+                    isDelete: 1,
+                    pageSize: 10,
+                    sort: 0,
+                    type: 4,
+                    parentId: '4888024592213508144',
+                    url:
+                        '/bi/Viewer?proc=1&action=viewer&db=ROOT!2f!80066327!2f!!516c!!53f8!NPS!9879!!76ee!!2f!!670d!!52a1!NPS!2f!!95ed!!73af!!7ba1!!7406!!5904!!7406!!8be6!!60c5!.db',
+                    path: 'ROOT/80066327/公司NPS项目/服务NPS/闭环管理处理详情',
+                    pageIndex: 0,
+                    updateBy: 'W9009867',
+                    success: false,
+                    titleCn: '测试123人事报表',
+                    id: '4888024592213508206',
+                    menus: [],
+                    createDate: 1616637375000
+                  }
+                ],
+                introduction: '人事报表-人事详情',
+                createDate: 1616633676000
+              }
+            ],
+            introduction: '阿里云平台',
+            createDate: 1616582839000
+          },
+          {
+            creator: 'W9004553',
+            updateDate: 1616585105000,
+            iconName: 'icon_card_财经.png',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/2021032419250195979b423de54f6692dc4738eda094ac.PNG',
+            description: '淘宝商城购物网站-这是一个假货聚集地',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4888024592213508135',
+            pageIndex: 0,
+            updateBy: 'W9004553',
+            success: false,
+            titleCn: '淘宝商城',
+            id: '4888024592213508140',
+            menus: [],
+            introduction: '淘宝商城购物网站',
+            createDate: 1616585105000
+          },
+          {
+            creator: 'W9004553',
+            updateDate: 1616586006000,
+            iconName: 'icon_card_isc.png',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/202103241939479e10122f40a9449992d7d9ccfbb545a1.PNG',
+            description: '支付宝-一款手机App支付软件',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4888024592213508135',
+            pageIndex: 0,
+            updateBy: 'W9004553',
+            success: false,
+            titleCn: '支付宝',
+            id: '4888024592213508141',
+            menus: [],
+            introduction: '支付宝App',
+            createDate: 1616586006000
+          },
+          {
+            creator: 'W9004553',
+            updateDate: 1616586122000,
+            iconName: 'icon_card_品质.png',
+            isDelete: 1,
+            icon:
+                'http://bdx-test.myoas.com/bdx/api/file/202103241942012cd8d6e1211c43a2bf8ee539d6918cad.PNG',
+            description: '蚂蚁服App-一款金融App',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4888024592213508135',
+            pageIndex: 0,
+            updateBy: 'W9004553',
+            success: false,
+            titleCn: '蚂蚁服',
+            id: '4888024592213508142',
+            menus: [],
+            introduction: '蚂蚁服App',
+            createDate: 1616586122000
+          },
+          {
+            creator: 'W9004553',
+            updateDate: 1617355953000,
+            isDelete: 1,
+            description:
+                '安徽省登记卡时间段卡交叉路口每次你仔细看剧还是敌后方is开始减肥女乘客老师的女生里看到VN斯柯达吕女士的考虑你说的来看的奥斯卡的拉萨拉三等奖安保科代理费VN打开了  开发了啥地方建设领导方式',
+            pageSize: 10,
+            sort: 0,
+            type: 2,
+            parentId: '4888024592213508135',
+            pageIndex: 0,
+            updateBy: '80326813',
+            success: false,
+            titleCn: '电话费加快速度',
+            id: '4891377209325051904',
+            menus: [],
+            introduction: '爱神的箭奥克斯单号fgdf',
+            createDate: 1616660515000
+          }
+        ],
+        introduction: '后悔创立了阿里巴巴的马云',
+        createDate: 1616579753000
+      },
+      {
+        creator: 'W9004553',
+        updateDate: 1616579790000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: 'W9004553',
+        success: false,
+        titleCn: '普通家庭mht',
+        id: '4888024592213508136',
+        menus: [],
+        introduction: '',
+        createDate: 1616579790000
+      },
+      {
+        creator: 'W9004553',
+        updateDate: 1616579814000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: 'W9004553',
+        success: false,
+        titleCn: '不知妻美lqd',
+        id: '4888024592213508137',
+        menus: [],
+        introduction: '',
+        createDate: 1616579814000
+      },
+      {
+        creator: 'W9004553',
+        updateDate: 1616580178000,
+        isDelete: 1,
+        description: '',
+        pageSize: 10,
+        pictureName: 'p5.jpg',
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        picture:
+            'http://bdx-test.myoas.com/bdx/api/file/2021032418025227261c26ae444a56893f0df8a0ddb8f5.JPG',
+        pageIndex: 0,
+        updateBy: 'W9004553',
+        success: false,
+        titleCn: '顺便赚钱dss',
+        id: '4888024592213508138',
+        menus: [],
+        introduction: '',
+        createDate: 1616579858000
+      },
+      {
+        creator: 'W9006026',
+        updateDate: 1616643660000,
+        isDelete: 1,
+        description: '撒旦实打实大苏打实打实',
+        pageSize: 10,
+        sort: 0,
+        type: 1,
+        parentId: '4840220815934242815',
+        pageIndex: 0,
+        updateBy: 'W9006026',
+        success: false,
+        titleCn: 'test一级菜单',
+        id: '4890859030110715904',
+        menus: [],
+        introduction: '是',
+        createDate: 1616643651000
+      }
+    ]
     // 模拟后台获取选中id集合
-    const idList = [9, 5, 8, 12]
+    const idList = [
+      '4888024592213508136',
+      '4888024592213508137',
+      '4888024592213508138',
+      '4888024592213508140',
+      '4888024592213508141',
+      '4888024592213508142',
+      '4888024592213508143',
+      '4888024592213508149',
+      '4888024592213508164',
+      '4888024592213508176',
+      '4888024592213508190'
+    ]
     // 定义过滤函数
     const filterData = (allData, selectIds) => {
       return allData.filter(value => {
-        if (value.childList) {
+        if (value.menus && value.menus.length > 0) {
           // 递归
-          value.childList = filterData(value.childList, selectIds)
-          return (value.childList && value.childList.length > 0)
+          value.menus = filterData(value.menus, selectIds)
+          return (value.menus && value.menus.length > 0)
         } else {
           return selectIds.find(selectId => value.id === selectId)
         }
@@ -87,8 +2487,7 @@ export default {
     this.$nextTick(() => {
       // 过滤数据，赋值渲染
       this.data = filterData(netData, idList)
-      // 设置选中
-      this.$refs.tree.setCheckedKeys(idList)
+      console.log(this.data)
     })
   }
 }
