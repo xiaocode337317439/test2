@@ -1,4 +1,5 @@
 const path = require('path')
+const fs = require('fs')
 const { PORT, HOST } = process.env
 
 module.exports = {
@@ -44,5 +45,10 @@ module.exports = {
 }
 
 function resolve(dir) {
+  const data = fs.readFileSync('./package.json', 'utf8')
+  console.log(JSON.parse(data).version)
+  console.log(JSON.parse(data).version)
+  console.log(JSON.parse(data).version)
+  console.log(JSON.parse(data).version)
   return path.join(__dirname, dir)
 }
