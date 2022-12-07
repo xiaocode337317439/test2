@@ -33,7 +33,7 @@
     "extract-text-webpack-plugin": "^3.0.2",
     "html-webpack-tags-plugin": "^2.0.15",
     "inline-manifest-webpack-plugin": "^4.0.2",
-    "lint-staged": "^8.1.5",
+    "lint-staged": "^13.1.0",
     "node-sass": "^4.9.0",
     "prerender-spa-plugin": "^3.4.0",
     "sass-loader": "^7.1.0",
